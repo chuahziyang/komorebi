@@ -7,6 +7,7 @@ Komorebic(cmd) {
 
 !q::Komorebic("close")
 !m::Komorebic("minimize")
+!u::Komorebic("promote")
 
 ; Focus windows
 !h::Komorebic("focus left")
@@ -43,7 +44,7 @@ Komorebic(cmd) {
 !f::Komorebic("toggle-monocle")
 
 ; Window manager options
-!+r::Komorebic("retile")
+!r::Komorebic("retile")
 !p::Komorebic("toggle-pause")
 
 ; Layouts
