@@ -29,7 +29,7 @@
       "workspaces": [
         {
           "name": "I",
-          "layout": "BSP"
+          "layout": "VerticalStack"
         },
         {
           "name": "II",
@@ -37,23 +37,27 @@
         },
         {
           "name": "III",
-          "layout": "HorizontalStack"
+          "layout": "VerticalStack"
         },
         {
           "name": "IV",
-          "layout": "UltrawideVerticalStack"
+          "layout": "VerticalStack"
         },
         {
           "name": "V",
-          "layout": "Rows"
+          "layout": "VerticalStack"
         },
         {
           "name": "VI",
-          "layout": "Grid"
+          "layout": "VerticalStack"
         },
         {
           "name": "VII",
-          "layout": "RightMainVerticalStack"
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "VIII",
+          "layout": "VerticalStack"
         }
       ]
     }
