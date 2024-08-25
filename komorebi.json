@@ -12,11 +12,11 @@
     "single": "#34eb9b",
     "stack": "#eb6b34",
     "monocle": "#ff3399",
-    "unfocused": "#808080"
+    "unfocused": "#110F17"
   },
   "stackbar": {
     "height": 20,
-    "mode": "OnStack",
+    "mode": "Never",
     "tabs": {
       "width": 300,
       "focused_text": "#00a542",

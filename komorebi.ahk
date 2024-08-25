@@ -10,28 +10,28 @@ Komorebic(cmd) {
 !u::Komorebic("promote")
 
 ; Focus windows
-!h::Komorebic("focus left")
-!j::Komorebic("focus down")
-!k::Komorebic("focus up")
-!l::Komorebic("focus right")
+!a::Komorebic("focus left")
+!s::Komorebic("focus down")
+!w::Komorebic("focus up")
+!d::Komorebic("focus right")
 
-!+[::Komorebic("cycle-focus previous")
-!+]::Komorebic("cycle-focus next")
+!+j::Komorebic("cycle-focus previous")
+!+k::Komorebic("cycle-focus next")
 
 ; Move windows
-!+h::Komorebic("move left")
-!+j::Komorebic("move down")
-!+k::Komorebic("move up")
-!+l::Komorebic("move right")
+!+a::Komorebic("move left")
+!+s::Komorebic("move down")
+!+w::Komorebic("move up")
+!+d::Komorebic("move right")
 
 ; Stack windows
 !Left::Komorebic("stack left")
 !Down::Komorebic("stack down")
 !Up::Komorebic("stack up")
 !Right::Komorebic("stack right")
-!;::Komorebic("unstack")
-![::Komorebic("cycle-stack previous")
-!]::Komorebic("cycle-stack next")
+!l::Komorebic("unstack")
+!j::Komorebic("cycle-stack previous")
+!k::Komorebic("cycle-stack next")
 
 ; Resize
 !=::Komorebic("resize-axis horizontal increase")
@@ -70,3 +70,10 @@ Komorebic(cmd) {
 !+6::Komorebic("move-to-workspace 5")
 !+7::Komorebic("move-to-workspace 6")
 !+8::Komorebic("move-to-workspace 7")
+
+
++PrintScreen::Volume_Down
++Pause::Volume_Up
+ScrollLock::Media_Play_Pause
+!Pause::Media_Next
+!PrintScreen::Media_Prev
