@@ -1526,12 +1526,12 @@
     matching_strategy: Equals
 - name: ueli
   identifier:
-    kind: Exe
+    kind: exe
     id: ueli.exe
-    matching_strategy: Equals
+    matching_strategy: equals
   options:
   - tray_and_multi_window
   float_identifiers:
-  - kind: Exe
+  - kind: exe
     id: ueli.exe
-    matching_strategy: Equals
+    matching_strategy: equals
