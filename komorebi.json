@@ -15,14 +15,7 @@
     "unfocused": "#110F17"
   },
   "stackbar": {
-    "height": 20,
     "mode": "Never",
-    "tabs": {
-      "width": 300,
-      "focused_text": "#00a542",
-      "unfocused_text": "#b3b3b3",
-      "background": "#141414"
-    }
   },
   "monitors": [
     {

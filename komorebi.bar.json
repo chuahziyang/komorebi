@@ -3,10 +3,11 @@
   "monitor": 0,
   "font_family": "Geist Mono",
   "theme": {
-    "palette": "Base16",
-    "name": "Ashes",
-    "accent": "Base0D"
+    "palette": "Catppuccin",
+    "name": "Frappe",
+    "bar_accent": "Pink"
   },
+  "height": 40,
   "left_widgets": [
     {
       "Komorebi": {
