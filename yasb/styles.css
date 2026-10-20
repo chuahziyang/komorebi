@@ -14,9 +14,15 @@
 }
 
 * {
-    font-family: "Geist Mono", "Segoe UI Variable", "Segoe UI";
-    font-size: 13px;
+    font-family: "Geist Mono", "GeistMono NFP", "Segoe UI Variable", "Segoe UI";
+    font-size: 14px;
+    font-weight: 500;
     color: var(--white);
+}
+
+/* Set it on the bar and labels too, since some widgets don't inherit from * */
+.yasb-bar, .widget, .label, QLabel, QPushButton {
+    font-family: "Geist Mono", "GeistMono NFP", "Segoe UI Variable", "Segoe UI";
 }
 
 .yasb-bar {

@@ -50,21 +50,26 @@ komorebi starts but the hotkeys don't.
 
 ### 4. Start everything when Windows starts
 
-`komorebic enable-autostart` has no `--ahk` option, so create the komorebi startup
-shortcut yourself:
+komorebi starts from a Task Scheduler task that runs as soon as you sign in. A
+Startup-folder shortcut (what `komorebic enable-autostart` makes) also works, but
+Windows runs those only after every other startup app, which took 6+ minutes here.
 
 ```powershell
-$lnk = Join-Path ([Environment]::GetFolderPath('Startup')) 'komorebi.lnk'
-$s = (New-Object -ComObject WScript.Shell).CreateShortcut($lnk)
-$s.TargetPath = 'C:\Program Files\komorebi\bin\komorebic-no-console.exe'
-$s.Arguments = 'start --config "C:\komorebi\komorebi.json" --ahk'
-$s.WorkingDirectory = 'C:\komorebi'
-$s.Save()
+$u = "$env:USERDOMAIN\$env:USERNAME"
+$action = New-ScheduledTaskAction -Execute 'C:\Program Files\komorebi\bin\komorebic-no-console.exe' `
+  -Argument 'start --config "C:\komorebi\komorebi.json" --ahk' -WorkingDirectory 'C:\komorebi'
+$trigger = New-ScheduledTaskTrigger -AtLogOn -User $u
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
+  -ExecutionTimeLimit ([TimeSpan]::Zero) -Priority 4
+$principal = New-ScheduledTaskPrincipal -UserId $u -LogonType Interactive -RunLevel Limited
+Register-ScheduledTask -TaskName 'komorebi' -Action $action -Trigger $trigger `
+  -Settings $settings -Principal $principal
 
 yasbc enable-autostart
 ```
 
-Don't add `--bar`, since YASB replaces komorebi-bar.
+Don't add `--bar`, since YASB replaces komorebi-bar. To test the task without
+restarting, run `Start-ScheduledTask -TaskName komorebi`.
 
 ### 5. Turn on taskbar auto-hide
 
@@ -98,6 +103,7 @@ yasbc start
 | `Alt + Shift + J / K` | Cycle focus previous / next |
 | `Alt + 1–8` | Go to workspace |
 | `Alt + Shift + 1–8` | Move window to workspace |
+| `Alt + Shift + M` | Move window to the other monitor |
 | `Alt + Q` | Close window |
 | `Alt + M` | Minimize window |
 | `Alt + U` | Promote window |

@@ -71,6 +71,9 @@ Komorebic(cmd) {
 !+7::Komorebic("move-to-workspace 6")
 !+8::Komorebic("move-to-workspace 7")
 
+; Move window to the other monitor (works even when that monitor's workspace is empty)
+!+m::Komorebic("cycle-move-to-monitor next")
+
 
 +PrintScreen::Volume_Down
 +Pause::Volume_Up
