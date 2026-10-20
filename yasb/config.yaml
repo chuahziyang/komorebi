@@ -1,0 +1,120 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+update_check: true
+show_systray: false
+
+komorebi:
+  start_command: "komorebic start --config C:\\komorebi\\komorebi.json --ahk"
+  stop_command: "komorebic stop --ahk"
+  reload_command: "komorebic reload-configuration"
+
+bars:
+  main-bar:
+    enabled: true
+    screens: ['**']
+    class_name: "yasb-bar"
+    alignment:
+      position: "bottom"
+      align: "center"
+    blur_effect:
+      enabled: false
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+      hide_on_fullscreen: true
+    dimensions:
+      width: "100%"
+      height: 40
+    padding:
+      top: 4
+      left: 6
+      bottom: 4
+      right: 6
+    widgets:
+      left: ["komorebi_workspaces", "komorebi_stack"]
+      center: ["taskbar"]
+      right: ["media", "clock"]
+
+widgets:
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "Komorebi Offline"
+      label_workspace_btn: "{name}"
+      label_workspace_active_btn: "{name}"
+      label_workspace_populated_btn: "{name}"
+      label_default_name: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: true
+      hide_if_offline: false
+
+  komorebi_stack:
+    type: "komorebi.stack.StackWidget"
+    options:
+      label_offline: ""
+      label_window: "{process}"
+      label_window_active: "{title}"
+      label_no_window: ""
+      label_zero_index: false
+      show_icons: "always"
+      icon_size: 16
+      max_length: 12
+      max_length_active: 30
+      max_length_ellipsis: ".."
+      hide_if_offline: true
+      show_only_stack: false
+      rewrite:
+        - pattern: "^(.+?)\\.exe$"
+          replacement: "\\1"
+          case: "lower"
+      enable_scroll_switching: true
+
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 18
+      tooltip: true
+      show_only_visible: false
+      strict_filtering: true
+      monitor_exclusive: true
+      animation:
+        enabled: true
+        duration: 200
+      grouping:
+        enabled: true
+        show_count: true
+      title_label:
+        enabled: false
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title}{s}{artist}"
+      label_alt: "{title}"
+      separator: " - "
+      hide_empty: true
+      max_field_size:
+        label: 30
+        label_alt: 30
+      show_thumbnail: false
+      controls_only: false
+      controls_left: true
+      controls_hide: true
+
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a %d %b  %H:%M}"
+      label_alt: "{%A %d %B %Y  %H:%M:%S}"
+      update_interval: 1000
+      calendar:
+        alignment: "right"
+        direction: "up"
+      callbacks:
+        on_left: "toggle_calendar"
+        on_right: "toggle_label"

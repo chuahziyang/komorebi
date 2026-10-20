@@ -1,0 +1,117 @@
+/* Aura Dark - palette from github.com/daltonmenezes/aura-theme */
+:root {
+    --black: #15141b;
+    --black-raised: #1f1d29;
+    --white: #edecee;
+    --gray: #6d6d6d;
+    --purple: #a277ff;
+    --purple-fading: rgba(61, 55, 94, 0.5);
+    --green: #61ffca;
+    --orange: #ffca85;
+    --pink: #f694ff;
+    --blue: #82e2ff;
+    --red: #ff6767;
+}
+
+* {
+    font-family: "Geist Mono", "Segoe UI Variable", "Segoe UI";
+    font-size: 13px;
+    color: var(--white);
+}
+
+.yasb-bar {
+    background-color: rgba(21, 20, 27, 0.92);
+    border-top: 1px solid var(--purple-fading);
+}
+
+.widget {
+    padding: 0 6px;
+}
+
+.widget .label {
+    padding: 0 2px;
+}
+
+/* Workspaces */
+.komorebi-workspaces .ws-btn {
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin: 0 2px;
+    color: var(--gray);
+}
+.komorebi-workspaces .ws-btn.populated {
+    color: var(--purple);
+}
+.komorebi-workspaces .ws-btn.active {
+    background-color: var(--purple-fading);
+    color: var(--green);
+}
+.komorebi-workspaces .ws-btn:hover {
+    color: var(--white);
+}
+.komorebi-workspaces .offline-status {
+    color: var(--red);
+}
+
+/* Windows in the focused stack */
+.komorebi-stack .window {
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 0 2px;
+}
+.komorebi-stack .window .label {
+    color: var(--gray);
+}
+.komorebi-stack .window:hover .label {
+    color: var(--white);
+}
+.komorebi-stack .window.active {
+    background-color: var(--purple-fading);
+}
+.komorebi-stack .window.active .label {
+    color: var(--pink);
+}
+.komorebi-stack .window .icon {
+    padding-right: 4px;
+}
+
+/* Taskbar of all open apps */
+.taskbar-widget .app-container {
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    border-bottom: 2px solid transparent;
+}
+.taskbar-widget .app-container:hover {
+    background-color: var(--black-raised);
+}
+.taskbar-widget .app-container.running {
+    border-bottom: 2px solid var(--purple-fading);
+}
+.taskbar-widget .app-container.running.minimized {
+    border-bottom: 2px solid transparent;
+}
+.taskbar-widget .app-container.foreground {
+    background-color: var(--purple-fading);
+    border-bottom: 2px solid var(--purple);
+}
+.taskbar-widget .app-container.flashing {
+    background-color: rgba(255, 202, 133, 0.2);
+    border-bottom: 2px solid var(--orange);
+}
+.taskbar-widget .app-container .app-count {
+    font-size: 10px;
+    color: var(--green);
+}
+
+/* Media and clock */
+.media-widget .label {
+    color: var(--blue);
+}
+.clock-widget .label {
+    color: var(--orange);
+}
