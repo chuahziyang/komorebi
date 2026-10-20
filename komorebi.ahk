@@ -77,3 +77,37 @@ Komorebic(cmd) {
 ScrollLock::Media_Play_Pause
 !Pause::Media_Next
 !PrintScreen::Media_Prev
+
+; Keep the Windows taskbar hidden (YASB replaces it). Alt+Shift+B toggles it back.
+global taskbarHidden := true
+
+SetTaskbarVisible(visible) {
+    DetectHiddenWindows(true)
+    for cls in ["Shell_TrayWnd", "Shell_SecondaryTrayWnd"] {
+        for hwnd in WinGetList("ahk_class " cls) {
+            if visible
+                WinShow("ahk_id " hwnd)
+            else
+                WinHide("ahk_id " hwnd)
+        }
+    }
+    DetectHiddenWindows(false)
+}
+
+; Re-hide every couple of seconds in case Explorer restarts and brings it back
+KeepTaskbarHidden() {
+    if taskbarHidden
+        SetTaskbarVisible(false)
+}
+
+SetTaskbarVisible(false)
+SetTimer(KeepTaskbarHidden, 2000)
+
+!+b:: {
+    global taskbarHidden
+    taskbarHidden := !taskbarHidden
+    SetTaskbarVisible(!taskbarHidden)
+}
+
+
+

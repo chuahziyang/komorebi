@@ -14,6 +14,16 @@
     "monocle": "#ff3399",
     "unfocused": "#110F17"
   },
+  "display_index_preferences": {
+    "0": "SAM0DD4-5&2f3cc79a&0&UID4353",
+    "1": "LHCFFFF-5&2f3cc79a&0&UID4352"
+  },
+  "layered_applications": [
+    { "kind": "Exe", "id": "claude.exe", "matching_strategy": "Equals" }
+  ],
+  "manage_rules": [
+    { "kind": "Exe", "id": "claude.exe", "matching_strategy": "Equals" }
+  ],
   "stackbar": {
     "mode": "Never",
   },

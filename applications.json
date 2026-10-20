@@ -141,9 +141,23 @@
     "tray_and_multi_window": [
       {
         "kind": "Exe",
-        "id": "anki.exe",
+        "id": "Anki.exe",
         "matching_strategy": "Equals"
       }
+    ],
+    "floating": [
+      [
+        {
+          "kind": "Exe",
+          "id": "Anki.exe",
+          "matching_strategy": "Equals"
+        },
+        {
+          "kind": "Title",
+          "id": "- Anki",
+          "matching_strategy": "DoesNotEndWith"
+        }
+      ]
     ]
   },
   "ApplicationFrameHost": {
@@ -269,6 +283,15 @@
       {
         "kind": "Exe",
         "id": "barrier.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
+  "Battlestate Games Launcher": {
+    "floating": [
+      {
+        "kind": "Exe",
+        "id": "BsgLauncher.exe",
         "matching_strategy": "Equals"
       }
     ]
@@ -473,6 +496,15 @@
       {
         "kind": "Exe",
         "id": "datagrip64.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
+  "Dell Display Manager": {
+    "ignore": [
+      {
+        "kind": "Exe",
+        "id": "DDM.exe",
         "matching_strategy": "Equals"
       }
     ]
@@ -1455,6 +1487,15 @@
       ]
     ]
   },
+  "MicMute": {
+    "floating": [
+      {
+        "kind": "Exe",
+        "id": "MicMute.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
   "Microsoft Active Accessibility": {
     "ignore": [
       {
@@ -1492,6 +1533,15 @@
       {
         "kind": "Exe",
         "id": "EXCEL.EXE",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
+  "Microsoft IME Pad": {
+    "floating": [
+      {
+        "kind": "Exe",
+        "id": "IMEPADSV.EXE",
         "matching_strategy": "Equals"
       }
     ]
@@ -1563,17 +1613,10 @@
           "matching_strategy": "StartsWith"
         }
       ]
-     ]
+    ]
   },
   "Microsoft Teams": {
     "tray_and_multi_window": [
-      {
-        "kind": "Class",
-        "id": "TeamsWebView",
-        "matching_strategy": "Equals"
-      }
-    ],
-    "object_name_change": [
       {
         "kind": "Class",
         "id": "TeamsWebView",
@@ -1986,6 +2029,11 @@
       {
         "kind": "Exe",
         "id": "PowerToys.FileLocksmithUI.exe",
+        "matching_strategy": "Equals"
+      },
+      {
+        "kind": "Exe",
+        "id": "PowerToys.QuickAccess.exe",
         "matching_strategy": "Equals"
       },
       {
@@ -2731,7 +2779,19 @@
         {
           "kind": "Title",
           "id": " - Microsoft Visual Studio",
-          "matching_strategy": "DoesNotEndWith"
+          "matching_strategy": "DoesNotContain"
+        }
+      ],
+      [
+        {
+          "kind": "Exe",
+          "id": "DevHub.exe",
+          "matching_strategy": "Equals"
+        },
+        {
+          "kind": "Class",
+          "id": "ThreadedWaitDialog",
+          "matching_strategy": "Equals"
         }
       ]
     ],
@@ -3081,6 +3141,11 @@
       {
         "kind": "Exe",
         "id": "msiexec.exe",
+        "matching_strategy": "Equals"
+      },
+      {
+        "kind": "Class",
+        "id": "MsiDialogCloseClass",
         "matching_strategy": "Equals"
       }
     ]

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.36/schema.bar.json",
+  "monitor": {
+    "index": 1,
+    "work_area_offset": { "left": 0, "top": 0, "right": 0, "bottom": 40 }
+  },
+  "position": {
+    "start": { "x": 1920, "y": 1040 },
+    "end": { "x": 1920, "y": 40 }
+  },
+  "font_family": "Geist Mono",
+  "transparency_alpha": 200,
+  "theme": {
+   "palette": "Catppuccin",
+    "name": "Frappe",
+    "bar_accent": "Pink"
+  },
+  "height": 40,
+  "left_widgets": [
+    {
+      "Komorebi": {
+        "workspaces": {
+          "enable": true,
+          "hide_empty_workspaces": true,
+          "display": "AllIconsAndTextOnSelected"
+        },
+        "layout": {
+          "enable": false
+        },
+        "focused_window": {
+          "enable": true,
+          "show_icon": true
+        }
+      }
+    }
+  ],
+  "right_widgets": [
+    {
+      "Update": {
+        "enable": true
+      }
+    },
+    {
+      "Media": {
+        "enable": true
+      }
+    },
+    {
+      "Storage": {
+        "enable": false
+      }
+    },
+    {
+      "Memory": {
+        "enable": false
+      }
+    },
+    {
+      "Network": {
+        "enable": false,
+        "show_total_data_transmitted": true,
+        "show_network_activity": true
+      }
+    },
+    {
+      "Date": {
+        "enable": true,
+        "format": "DayDateMonthYear"
+      }
+    },
+    {
+      "Time": {
+        "enable": true,
+        "format": "TwentyFourHour"
+      }
+    },
+    {
+      "Battery": {
+        "enable": false
+      }
+    }
+  ]
+}
