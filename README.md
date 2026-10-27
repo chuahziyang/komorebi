@@ -11,6 +11,7 @@ that replaces the Windows taskbar (Aura Dark theme).
 | `komorebi.json` | Main komorebi config (workspaces, borders, padding, extra manage rules) |
 | `applications.json` | Community app rules, downloaded with `komorebic fetch-asc` |
 | `komorebi.ahk` | Hotkeys (AutoHotkey v2) and hides the Windows taskbar |
+| `switcher.ahk` | Alt+E window switcher, one row per monitor (included by `komorebi.ahk`) |
 | `yasb/config.yaml` | YASB bar layout and widgets |
 | `yasb/styles.css` | YASB theme (Aura Dark) |
 | `komorebi.bar.json`, `komorebic2.bar.json` | Old komorebi-bar configs, no longer used |
@@ -115,6 +116,12 @@ yasbc start
 | `Alt + = / -` | Resize width |
 | `Alt + Shift + = / _` | Resize height |
 | `Alt + Shift + B` | Show / hide the Windows taskbar |
+| `Alt + E` | Open / close the window switcher: top row is this monitor, bottom row the other one |
+| `H/L` (in the switcher) | Left / right |
+| `J/K` (in the switcher) | Down / up a row |
+| `Tab` / `Shift + Tab` (in the switcher) | Next / previous window |
+| `Enter`, `Space` or click (in the switcher) | Switch to the selected window |
+| `Esc` or click elsewhere (in the switcher) | Close without switching |
 | `Shift + PrtSc` / `Shift + Pause` | Volume down / up |
 | `ScrollLock` | Play / pause media |
 | `Alt + Pause` / `Alt + PrtSc` | Next / previous track |

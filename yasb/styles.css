@@ -121,3 +121,54 @@
 .clock-widget .label {
     color: var(--orange);
 }
+
+/* Volume */
+.volume-widget .label {
+    color: var(--white);
+}
+.volume-widget .icon {
+    color: var(--purple);
+    margin: 0 4px 0 0;
+}
+.volume-widget .icon.muted,
+.volume-widget .label.muted {
+    color: var(--gray);
+}
+.audio-menu {
+    background-color: rgba(21, 20, 27, 0.9);
+    min-width: 300px;
+}
+.audio-menu .system-volume-container .volume-slider {
+    border: none;
+}
+.audio-menu .audio-container .device {
+    background-color: transparent;
+    border: none;
+    padding: 6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.audio-menu .audio-container .device.selected {
+    background-color: var(--purple-fading);
+}
+.audio-menu .audio-container .device:hover {
+    background-color: var(--black-raised);
+}
+.audio-menu .toggle-apps {
+    background-color: transparent;
+    border: none;
+    min-height: 24px;
+    min-width: 24px;
+    border-radius: 4px;
+}
+.audio-menu .toggle-apps:hover,
+.audio-menu .toggle-apps.expanded {
+    background-color: var(--black-raised);
+}
+.audio-menu .apps-container {
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: var(--black-raised);
+}

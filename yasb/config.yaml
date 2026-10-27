@@ -34,7 +34,7 @@ bars:
     widgets:
       left: ["komorebi_workspaces", "komorebi_stack"]
       center: ["taskbar"]
-      right: ["media", "clock"]
+      right: ["media", "volume", "clock"]
 
 widgets:
   komorebi_workspaces:
@@ -58,7 +58,7 @@ widgets:
       label_no_window: ""
       label_zero_index: false
       show_icons: "always"
-      icon_size: 16
+      icon_size: 20
       max_length: 12
       max_length_active: 30
       max_length_ellipsis: ".."
@@ -73,7 +73,7 @@ widgets:
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
-      icon_size: 18
+      icon_size: 24
       tooltip: true
       show_only_visible: false
       strict_filtering: true
@@ -105,6 +105,34 @@ widgets:
       controls_only: false
       controls_left: true
       controls_hide: true
+
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "<span>{icon}</span>"
+      scroll_step: 2
+      slider_beep: false
+      icons:
+        "muted": ""
+        "10": ""
+        "30": ""
+        "60": ""
+        "100": ""
+      audio_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "up"
+        offset_top: 6
+        show_apps: true
+        show_app_icons: true
+      callbacks:
+        on_left: "toggle_volume_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:sound"
+        on_right: "toggle_mute"
 
   clock:
     type: "yasb.clock.ClockWidget"
