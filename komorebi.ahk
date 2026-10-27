@@ -74,6 +74,12 @@ Komorebic(cmd) {
 ; Move window to the other monitor (works even when that monitor's workspace is empty)
 !+m::Komorebic("cycle-move-to-monitor next")
 
+; Zen: Ctrl+J / Ctrl+K go to the next / previous tab in sidebar order
+#HotIf WinActive("ahk_exe zen.exe")
+^j::Send("^{PgDn}")
+^k::Send("^{PgUp}")
+#HotIf
+
 
 +PrintScreen::Volume_Down
 +Pause::Volume_Up

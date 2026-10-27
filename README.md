@@ -122,6 +122,7 @@ yasbc start
 | `Tab` / `Shift + Tab` (in the switcher) | Next / previous window |
 | `Enter`, `Space` or click (in the switcher) | Switch to the selected window |
 | `Esc` or click elsewhere (in the switcher) | Close without switching |
+| `Ctrl + J / K` (in Zen) | Next / previous tab, in sidebar order |
 | `Shift + PrtSc` / `Shift + Pause` | Volume down / up |
 | `ScrollLock` | Play / pause media |
 | `Alt + Pause` / `Alt + PrtSc` | Next / previous track |
