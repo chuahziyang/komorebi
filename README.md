@@ -133,7 +133,9 @@ scroll to cycle, middle-click to close), a taskbar of every open app including
 minimized ones, then media and the clock.
 
 YASB reloads automatically when you save `yasb/config.yaml` or `yasb/styles.css`.
-The colours come from the Aura palette:
+The colours come from the Aura palette, and komorebi's window borders use it
+too (`border_colours` in `komorebi.json`: purple single, blue stack, pink
+monocle, orange floating):
 https://github.com/daltonmenezes/aura-theme/blob/main/packages/color-palettes/aura-colors.css
 
 ## Tips

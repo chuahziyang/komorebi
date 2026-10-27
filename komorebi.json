@@ -9,10 +9,11 @@
   "border_width": 3,
   "border_offset": -1,
   "border_colours": {
-    "single": "#34eb9b",
-    "stack": "#eb6b34",
-    "monocle": "#ff3399",
-    "unfocused": "#110F17"
+    "single": "#a277ff",
+    "stack": "#82e2ff",
+    "monocle": "#f694ff",
+    "floating": "#ffca85",
+    "unfocused": "#15141b"
   },
   "display_index_preferences": {
     "0": "SAM0DD4-5&2f3cc79a&0&UID4353",
