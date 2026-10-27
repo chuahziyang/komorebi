@@ -9,8 +9,8 @@
   "border_width": 3,
   "border_offset": -1,
   "border_colours": {
-    "single": "#a277ff",
-    "stack": "#82e2ff",
+    "single": "#82e2ff",
+    "stack": "#a277ff",
     "monocle": "#f694ff",
     "floating": "#ffca85",
     "unfocused": "#15141b"
