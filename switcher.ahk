@@ -1,6 +1,6 @@
-; Two-row window switcher (Alt+E), included by komorebi.ahk.
+; Two-row window switcher (Alt+G), included by komorebi.ahk.
 ; Row 1 = windows on the current monitor, row 2 = windows on the other monitor.
-; Alt+E opens it (and closes it again). H/L move left/right, J/K move down/up a
+; Alt+G opens it (and closes it again). H/L move left/right, J/K move down/up a
 ; row, Enter or a click switches, Esc or clicking elsewhere cancels.
 
 global Sw := {gui: 0, rows: [], cells: [], row: 1, col: 1, titleCtrl: 0}
@@ -223,7 +223,7 @@ SwCommit() {
     }
 }
 
-!e:: {
+!g:: {
     if SwIsOpen()
         SwClose()
     else

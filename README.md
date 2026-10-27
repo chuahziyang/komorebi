@@ -11,7 +11,7 @@ that replaces the Windows taskbar (Aura Dark theme).
 | `komorebi.json` | Main komorebi config (workspaces, borders, padding, extra manage rules) |
 | `applications.json` | Community app rules, downloaded with `komorebic fetch-asc` |
 | `komorebi.ahk` | Hotkeys (AutoHotkey v2) and hides the Windows taskbar |
-| `switcher.ahk` | Alt+E window switcher, one row per monitor (included by `komorebi.ahk`) |
+| `switcher.ahk` | Alt+G window switcher, one row per monitor (included by `komorebi.ahk`) |
 | `yasb/config.yaml` | YASB bar layout and widgets |
 | `yasb/styles.css` | YASB theme (Aura Dark) |
 | `komorebi.bar.json`, `komorebic2.bar.json` | Old komorebi-bar configs, no longer used |
@@ -116,7 +116,7 @@ yasbc start
 | `Alt + = / -` | Resize width |
 | `Alt + Shift + = / _` | Resize height |
 | `Alt + Shift + B` | Show / hide the Windows taskbar |
-| `Alt + E` | Open / close the window switcher: top row is this monitor, bottom row the other one |
+| `Alt + G` | Open / close the window switcher: top row is this monitor, bottom row the other one |
 | `H/L` (in the switcher) | Left / right |
 | `J/K` (in the switcher) | Down / up a row |
 | `Tab` / `Shift + Tab` (in the switcher) | Next / previous window |
@@ -130,7 +130,8 @@ yasbc start
 
 Left to right: workspaces, the windows in the focused stack (click to switch,
 scroll to cycle, middle-click to close), a taskbar of every open app including
-minimized ones, then media and the clock.
+minimized ones, then a Pomodoro timer (click for the menu, right-click to
+start/pause, middle-click to reset), volume and the clock.
 
 YASB reloads automatically when you save `yasb/config.yaml` or `yasb/styles.css`.
 The colours come from the Aura palette, and komorebi's window borders use it

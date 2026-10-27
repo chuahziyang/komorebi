@@ -112,7 +112,7 @@ SetTimer(KeepTaskbarHidden, 2000)
     SetTaskbarVisible(!taskbarHidden)
 }
 
-; Two-row window switcher on Alt+E
+; Two-row window switcher on Alt+G
 #Include %A_LineFile%\..\switcher.ahk
 
 

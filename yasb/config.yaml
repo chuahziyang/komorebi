@@ -34,7 +34,7 @@ bars:
     widgets:
       left: ["komorebi_workspaces", "komorebi_stack"]
       center: ["taskbar"]
-      right: ["media", "volume", "clock"]
+      right: ["pomodoro", "volume", "clock"]
 
 widgets:
   komorebi_workspaces:
@@ -91,20 +91,41 @@ widgets:
         titles: []
         classes: []
 
-  media:
-    type: "yasb.media.MediaWidget"
+  pomodoro:
+    type: "yasb.pomodoro.PomodoroWidget"
     options:
-      label: "{title}{s}{artist}"
-      label_alt: "{title}"
-      separator: " - "
-      hide_empty: true
-      max_field_size:
-        label: 30
-        label_alt: 30
-      show_thumbnail: false
-      controls_only: false
-      controls_left: true
-      controls_hide: true
+      label: "<span>{icon}</span> {remaining}"
+      label_alt: "<span>{icon}</span> {session}/{total_sessions} - {status}"
+      work_duration: 60
+      break_duration: 5
+      long_break_duration: 15
+      long_break_interval: 4
+      auto_start_breaks: true
+      auto_start_work: false
+      sound_notification: true
+      show_notification: true
+      session_target: 0
+      icons:
+        work: ""
+        break: ""
+        paused: ""
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "#3d375e"
+        alignment: "right"
+        direction: "up"
+        offset_top: 6
+        circle_background_color: "#1f1d29"
+        circle_work_progress_color: "#a277ff"
+        circle_break_progress_color: "#82e2ff"
+        circle_thickness: 8
+        circle_size: 160
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "reset_timer"
+        on_right: "toggle_timer"
 
   volume:
     type: "yasb.volume.VolumeWidget"
