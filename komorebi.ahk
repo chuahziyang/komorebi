@@ -121,5 +121,8 @@ SetTimer(KeepTaskbarHidden, 2000)
 ; Two-row window switcher on Alt+G
 #Include %A_LineFile%\..\switcher.ahk
 
+; Swap audio between headphones and speakers on Alt+Shift+H
+#Include %A_LineFile%\..\audio.ahk
+
 
 

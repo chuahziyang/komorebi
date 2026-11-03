@@ -12,6 +12,7 @@ that replaces the Windows taskbar (Aura Dark theme).
 | `applications.json` | Community app rules, downloaded with `komorebic fetch-asc` |
 | `komorebi.ahk` | Hotkeys (AutoHotkey v2) and hides the Windows taskbar |
 | `switcher.ahk` | Alt+G window switcher, one row per monitor (included by `komorebi.ahk`) |
+| `audio.ahk` | Alt+Shift+H headphones / speakers swap (included by `komorebi.ahk`) |
 | `yasb/config.yaml` | YASB bar layout and widgets |
 | `yasb/styles.css` | YASB theme (Aura Dark) |
 | `komorebi.bar.json`, `komorebic2.bar.json` | Old komorebi-bar configs, no longer used |
@@ -67,6 +68,9 @@ Register-ScheduledTask -TaskName 'komorebi' -Action $action -Trigger $trigger `
   -Settings $settings -Principal $principal
 
 yasbc enable-autostart
+# Use FreeType for softer bar text (Qt's default renderer is sharper and more pixel-snapped)
+Set-ItemProperty HKCU:\Software\Microsoft\Windows\CurrentVersion\Run YASB `
+  '"C:\Program Files\YASB\yasb.exe" -platform windows:fontengine=freetype'
 ```
 
 Don't add `--bar`, since YASB replaces komorebi-bar. To test the task without
@@ -89,8 +93,11 @@ Stop-Process -Name explorer -Force
 
 ```powershell
 komorebic start --config "C:\komorebi\komorebi.json" --ahk
-yasbc start
+Start-Process "C:\Program Files\YASB\yasb.exe" '-platform windows:fontengine=freetype'
 ```
+
+To restart the bar, run `yasbc stop` and then the `Start-Process` line above. Plain
+`yasbc start` works too, but brings back Qt's sharper default font rendering.
 
 ## Hotkeys
 
@@ -123,6 +130,7 @@ yasbc start
 | `Enter`, `Space` or click (in the switcher) | Switch to the selected window |
 | `Esc` or click elsewhere (in the switcher) | Close without switching |
 | `Ctrl + J / K` (in Zen) | Next / previous tab, in sidebar order |
+| `Alt + Shift + H` | Swap audio between headphones and speakers |
 | `Shift + PrtSc` / `Shift + Pause` | Volume down / up |
 | `ScrollLock` | Play / pause media |
 | `Alt + Pause` / `Alt + PrtSc` | Next / previous track |

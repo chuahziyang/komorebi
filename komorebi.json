@@ -29,7 +29,9 @@
     ]
   ],
   "ignore_rules": [
-    { "kind": "Class", "id": "MSCTFIME UI", "matching_strategy": "Equals" }
+    { "kind": "Class", "id": "MSCTFIME UI", "matching_strategy": "Equals" },
+    { "kind": "Exe", "id": "Animal Well.exe", "matching_strategy": "Equals" },
+    { "kind": "Exe", "id": "Tunic.exe", "matching_strategy": "Equals" }
   ],
   "stackbar": {
     "mode": "Never",
