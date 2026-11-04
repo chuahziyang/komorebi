@@ -13,6 +13,7 @@ that replaces the Windows taskbar (Aura Dark theme).
 | `komorebi.ahk` | Hotkeys (AutoHotkey v2) and hides the Windows taskbar |
 | `switcher.ahk` | Alt+G window switcher, one row per monitor (included by `komorebi.ahk`) |
 | `audio.ahk` | Alt+Shift+H headphones / speakers swap (included by `komorebi.ahk`) |
+| `fullscreen.ahk` | Puts fullscreen Zen back over the whole monitor after komorebi resizes it (included by `komorebi.ahk`) |
 | `yasb/config.yaml` | YASB bar layout and widgets |
 | `yasb/styles.css` | YASB theme (Aura Dark) |
 | `komorebi.bar.json`, `komorebic2.bar.json` | Old komorebi-bar configs, no longer used |

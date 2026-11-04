@@ -124,5 +124,8 @@ SetTimer(KeepTaskbarHidden, 2000)
 ; Swap audio between headphones and speakers on Alt+Shift+H
 #Include %A_LineFile%\..\audio.ahk
 
+; Keep Zen fullscreen after cycling a stack away and back
+#Include %A_LineFile%\..\fullscreen.ahk
+
 
 
